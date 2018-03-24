@@ -17,4 +17,5 @@ public class ActionDto {
     public void setRecipient(String recipient) {
         this.recipient = recipient;
     }
+
 }

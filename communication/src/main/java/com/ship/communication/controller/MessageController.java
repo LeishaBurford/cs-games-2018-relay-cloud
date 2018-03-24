@@ -34,6 +34,10 @@ public class MessageController {
 
     @RequestMapping(value = "/sendMessage", method = RequestMethod.POST)
     public Message sendMessage(@RequestBody Message message, @CookieValue("SESSION") String cookie) {
+        // FYI I haven't a clue what to do...It wouldn't build eureka.. :(
+        
+
+
         checkAccess(new ActionDto(message.getRecipient()), cookie);
         return messageRepository.save(message);
     }
